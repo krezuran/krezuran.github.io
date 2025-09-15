@@ -1,0 +1,25 @@
+#logo-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9998;
+    transition: transform 0.2s ease;
+}
+
+#logo-container:hover {
+    transform: scale(1.05);
+    cursor: url('../../link.38d1de5d4c03b83a.png'), auto; 
+}
+
+#logo-container:hover img {
+    cursor: inherit !important;
+}
+
+#logo-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 12px;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) 
+            drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+}

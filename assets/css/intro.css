@@ -1,0 +1,62 @@
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+#intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: url('../../link.38d1de5d4c03b83a.png'), auto !important; 
+  font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 2.7rem;
+  font-weight: bold;
+  transition: opacity 1s ease;
+}
+
+#intro-overlay * {
+  cursor: url('../../link.38d1de5d4c03b83a.png'), auto !important; 
+}
+
+#intro-overlay.fade-out {
+  opacity: 0;
+}
+
+.intro-text {
+  position: relative;
+  display: inline-block;
+}
+
+.intro-text::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.4px;
+  height: 0.96em;
+  background-color: white;
+  animation: blink 1s infinite;
+}
+
+.sub-text {
+  font-size: 1.08rem;
+  margin-top: 15px;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
